@@ -1,4 +1,4 @@
-# StartupSaathi - AI-Powered Startup Validator for India
+# StartupSaathi - AI-Powered Startup Validator for India 🇮🇳
 
 StartupSaathi is an intelligent platform that helps Indian entrepreneurs validate their startup ideas using AI-powered analysis tailored specifically for the Indian market.
 
