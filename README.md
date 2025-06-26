@@ -33,7 +33,7 @@ StartupSaathi is an intelligent platform that helps Indian entrepreneurs validat
 
 1. Clone the repository
 \`\`\`bash
-git clone https://github.com/yourusername/startupsaathi.git
+git clone https://github.com/Piratedpilot/startupsaathi.git
 cd startupsaathi
 \`\`\`
 
