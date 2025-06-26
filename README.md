@@ -2,6 +2,10 @@
 
 StartupSaathi is an intelligent platform that helps Indian entrepreneurs validate their startup ideas using AI-powered analysis tailored specifically for the Indian market.
 
+## Deployed On :
+
+Link : https://startupsaathi.netlify.app/
+
 ## Features
 
 - 🇮🇳 **India-Focused Analysis** - Market validation considering Indian demographics, regulations, and consumer behavior
@@ -18,7 +22,7 @@ StartupSaathi is an intelligent platform that helps Indian entrepreneurs validat
 - **Database**: Supabase (PostgreSQL)
 - **Authentication**: Supabase Auth
 - **AI**: Google Gemini API
-- **Deployment**: Vercel
+- **Deployment**: Netlify
 
 ## Getting Started
 
