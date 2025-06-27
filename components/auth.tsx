@@ -67,7 +67,7 @@ export default function Auth({ onBack }: AuthProps) {
     data: {
       full_name: fullName,
     },
-    emailRedirectTo: "https://startupsaathi.netlify.app/verified", // Use your deployed domain here
+    emailRedirectTo: "https://startupsaathi.netlify.app/verified", 
   },
 })
 
