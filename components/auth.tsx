@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { supabase } from "@/lib/supabase"
 import { Button } from "@/components/ui/button"
@@ -20,7 +19,8 @@ export default function Auth({ onBack }: AuthProps) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [fullName, setFullName] = useState("")
-  const { toast } = useToast()
+
+  const toastUtil = useToast()
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -33,19 +33,19 @@ export default function Auth({ onBack }: AuthProps) {
       })
 
       if (error) {
-        toast({
+        toastUtil.toast({
           title: "Error",
           description: error.message,
           variant: "destructive",
         })
       } else {
-        toast({
+        toastUtil.toast({
           title: "Success",
           description: "Successfully signed in!",
         })
       }
     } catch (error) {
-      toast({
+      toastUtil.toast({
         title: "Error",
         description: "An unexpected error occurred",
         variant: "destructive",
@@ -60,32 +60,31 @@ export default function Auth({ onBack }: AuthProps) {
     setLoading(true)
 
     try {
-   const { error } = await supabase.auth.signUp({
-  email,
-  password,
-  options: {
-    data: {
-      full_name: fullName,
-    },
-    emailRedirectTo: "https://startupsaathi.netlify.app/verified", 
-  },
-})
-
+      const { error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: fullName,
+          },
+          emailRedirectTo: "https://startupsaathi.netlify.app/verified",
+        },
+      })
 
       if (error) {
-        toast({
+        toastUtil.toast({
           title: "Error",
           description: error.message,
           variant: "destructive",
         })
       } else {
-        toast({
+        toastUtil.toast({
           title: "Success",
           description: "Check your email for the confirmation link!",
         })
       }
     } catch (error) {
-      toast({
+      toastUtil.toast({
         title: "Error",
         description: "An unexpected error occurred",
         variant: "destructive",
