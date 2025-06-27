@@ -60,15 +60,17 @@ export default function Auth({ onBack }: AuthProps) {
     setLoading(true)
 
     try {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: {
-          data: {
-            full_name: fullName,
-          },
-        },
-      })
+   const { error } = await supabase.auth.signUp({
+  email,
+  password,
+  options: {
+    data: {
+      full_name: fullName,
+    },
+    emailRedirectTo: "https://startupsaathi.netlify.app/verified", // Use your deployed domain here
+  },
+})
+
 
       if (error) {
         toast({
